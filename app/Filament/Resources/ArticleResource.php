@@ -46,7 +46,7 @@ class ArticleResource extends Resource
                         ->maxLength(255)
                         ->unique(ignoreRecord: true)
                 ]),
-                Forms\Components\Grid::make(2)
+                Forms\Components\Grid::make()
                     ->schema([
                         Forms\Components\Select::make('state')
                             ->label('State')
@@ -55,6 +55,11 @@ class ArticleResource extends Resource
                                 'draft', 'published', 'archive'
                             ])
                             ->default(0),
+                        Forms\Components\Select::make('category_id')
+                            ->relationship('category', 'title')
+                    ]),
+                Forms\Components\Grid::make(1)
+                    ->schema([
                         Forms\Components\SpatieMediaLibraryFileUpload::make('preview'),
                     ]),
                 Forms\Components\Grid::make(1)
@@ -93,8 +98,7 @@ class ArticleResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\SpatieMediaLibraryImageColumn::make('preview'),
-                Tables\Columns\TextColumn::make('state')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('state')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date()
                     ->sortable(),
