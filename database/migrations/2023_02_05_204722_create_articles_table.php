@@ -19,7 +19,6 @@ class CreateArticlesTable extends Migration
             $table->string('slug')->unique();
             $table->string('description')->nullable();
             $table->text('body')->nullable();
-            $table->string('preview')->nullable();
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
             $table->string('seo_keywords')->nullable();

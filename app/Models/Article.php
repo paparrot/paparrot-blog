@@ -23,7 +23,6 @@ class Article extends Model implements HasMedia
         'slug',
         'description',
         'body',
-        'preview',
         'seo_title',
         'seo_description',
         'seo_keywords',

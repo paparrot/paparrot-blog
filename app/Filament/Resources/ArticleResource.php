@@ -54,7 +54,8 @@ class ArticleResource extends Resource
                             ->options([
                                 'draft', 'published', 'archive'
                             ])
-                            ->default(0)
+                            ->default(0),
+                        Forms\Components\SpatieMediaLibraryFileUpload::make('preview'),
                     ]),
                 Forms\Components\Grid::make(1)
                     ->schema([
@@ -89,7 +90,9 @@ class ArticleResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->searchable()
                     ->sortable(),
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('preview'),
                 Tables\Columns\TextColumn::make('state')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -114,9 +117,9 @@ class ArticleResource extends Resource
                         ->trueLabel('With trashed records')
                         ->falseLabel('Only trashed records')
                         ->queries(
-                            true: fn (Builder $query) => $query->withTrashed(),
-                            false: fn (Builder $query) => $query->onlyTrashed(),
-                            blank: fn (Builder $query) => $query->withoutTrashed(),
+                            true: fn(Builder $query) => $query->withTrashed(),
+                            false: fn(Builder $query) => $query->onlyTrashed(),
+                            blank: fn(Builder $query) => $query->withoutTrashed(),
                         ),
                     Filter::make('created_at')
                         ->form([
@@ -130,11 +133,11 @@ class ArticleResource extends Resource
                             return $query
                                 ->when(
                                     $data['created_from'],
-                                    fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
+                                    fn(Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
                                 )
                                 ->when(
                                     $data['created_until'],
-                                    fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
+                                    fn(Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
                                 );
                         }),
                     Filter::make('updated_at')
@@ -149,11 +152,11 @@ class ArticleResource extends Resource
                             return $query
                                 ->when(
                                     $data['updated_from'],
-                                    fn (Builder $query, $date): Builder => $query->whereDate('updated_at', '>=', $date),
+                                    fn(Builder $query, $date): Builder => $query->whereDate('updated_at', '>=', $date),
                                 )
                                 ->when(
                                     $data['updated_until'],
-                                    fn (Builder $query, $date): Builder => $query->whereDate('updated_at', '<=', $date),
+                                    fn(Builder $query, $date): Builder => $query->whereDate('updated_at', '<=', $date),
                                 );
                         })
                 ],
