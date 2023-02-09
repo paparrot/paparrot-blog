@@ -11,10 +11,8 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Filters\Filter;
-use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
 class CategoryResource extends Resource
 {
