@@ -6,17 +6,17 @@ This is project of backend and admin panel for personal blog built with Laravel 
 [Demo will be here](https://google.com)
 
 ## Roadmap
-- [ ] Article model
-- [ ] Article admin CRUD
+- [x] Article model
+- [x] Article admin CRUD
 - [ ] Article API methods
-- [ ] Category model
-- [ ] Category admin CRUD
+- [x] Category model
+- [x] Category admin CRUD
 - [ ] Category API methods
-- [ ] Tag model
-- [ ] Tag admin CRUD
+- [x] Tag model
+- [x] Tag admin CRUD
 - [ ] Tag API methods
-- [ ] Article - Category relationship
-- [ ] Article - Tag relationship
+- [x] Article - Category relationship
+- [x] Article - Tag relationship
 - [ ] Page model
 - [ ] Page admin CRUD
 - [ ] Page API methods
