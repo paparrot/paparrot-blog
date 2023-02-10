@@ -52,7 +52,9 @@ class ArticleResource extends Resource
                             ->label('State')
                             ->required()
                             ->options([
-                                'draft', 'published', 'archive'
+                                'draft' => "Draft",
+                                'published' => "Published",
+                                'archive' => "Archive",
                             ])
                             ->default(0),
                         Forms\Components\Select::make('category_id')
@@ -98,7 +100,18 @@ class ArticleResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\SpatieMediaLibraryImageColumn::make('preview'),
-                Tables\Columns\TextColumn::make('state')->sortable(),
+                Tables\Columns\IconColumn::make('state')
+                    ->options([
+                        'heroicon-o-pencil' => 'draft',
+                        'heroicon-o-archive' => 'archive',
+                        'heroicon-o-eye' => 'published',
+                    ])
+                    ->colors([
+                        'warning' => 'draft',
+                        'success' => 'published',
+                        'danger' => 'archive'
+                    ])
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date()
                     ->sortable(),
