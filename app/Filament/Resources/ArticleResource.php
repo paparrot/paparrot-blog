@@ -58,7 +58,10 @@ class ArticleResource extends Resource
                             ])
                             ->default(0),
                         Forms\Components\Select::make('category_id')
-                            ->relationship('category', 'title')
+                            ->relationship('category', 'title'),
+                        Forms\Components\Select::make('tags')
+                            ->multiple()
+                            ->relationship('tags', 'title')
                     ]),
                 Forms\Components\Grid::make(1)
                     ->schema([
