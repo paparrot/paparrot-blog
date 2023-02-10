@@ -19,4 +19,6 @@ This is project of backend and admin panel for personal blog built with Laravel 
 - [ ] Page model
 - [ ] Page admin CRUD
 - [ ] Page API methods
+- [ ] Add handling roles for users
+- [ ] Add filters to articles by category, tags and author
 - [ ] Blog navigation settings
