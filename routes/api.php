@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\ArticleController;
+use App\Http\Controllers\API\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('articles', ArticleController::class)
+    ->only(['show', 'index']);
+
+Route::resource('categories', CategoryController::class)
     ->only(['show', 'index']);
