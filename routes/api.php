@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\ArticleController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\PageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,7 @@ Route::resource('articles', ArticleController::class)
     ->only(['show', 'index']);
 
 Route::resource('categories', CategoryController::class)
+    ->only(['show', 'index']);
+
+Route::resource('pages', PageController::class)
     ->only(['show', 'index']);
