@@ -4,7 +4,7 @@
 
 @section('content')
     @include('components.hero')
-    @include('components.latest-blog')
+    @include('components.latest-blog', ['articles' => $articles])
     @include('components.latest-projects')
     @include('components.contacts')
 @endsection

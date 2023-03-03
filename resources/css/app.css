@@ -8,11 +8,15 @@
     }
 
     body {
-        @apply bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-400;
+        @apply bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-50;
     }
 
     h1,h2,h3,h4,h5,h6 {
-        @apply font-bold;
+        @apply font-bold dark:text-white text-gray-800 mb-3;
+    }
+
+    p {
+        @apply mb-3;
     }
 
     h1 {
@@ -36,7 +40,15 @@
     }
 
     a {
-        @apply text-base hover:text-indigo-600;
+        @apply text-base hover:text-indigo-600 dark:hover:text-indigo-400;
+    }
+
+    figcaption {
+        display: none;
+    }
+
+    pre {
+        @apply bg-indigo-50 dark:bg-indigo-900 rounded py-3;
     }
 }
 

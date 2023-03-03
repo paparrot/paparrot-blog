@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+/**
+ * @property string $slug
+ */
 class Page extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, HasUuids, InteractsWithMedia;
