@@ -64,4 +64,8 @@
     .card {
         @apply bg-gray-300 dark:bg-gray-800 bg-opacity-40 p-6 rounded-lg;
     }
+
+    .flash {
+        @apply absolute bottom-10 right-10 p-5 rounded-lg;
+    }
 }

@@ -9,9 +9,11 @@
 </head>
 <body class="dark min-h-screen flex flex-col">
 @include('components.header')
+@include('components.flash-message')
 <main class="grow p-5 container mx-auto">
     @yield('content')
 </main>
 @include('components.footer')
+@vite('resources/js/app.js')
 </body>
 

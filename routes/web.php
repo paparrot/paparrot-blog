@@ -18,12 +18,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', MainController::class);
+Route::get('/', MainController::class)
+    ->name('home');
 Route::get('/blog', [ArticleController::class, 'index'])
     ->name('articles.list');
 Route::get('/blog/{article:slug}', [ArticleController::class, 'show'])
     ->name('articles.show');
-Route::get('/projects/{project:slug}', [ProjectController::class, 'index']);
-Route::get('/contacts', [ContactsController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index'])
+    ->name('projects.list');
+Route::get('/projects/{project:slug}', [ProjectController::class, 'index'])
+    ->name('projects.show');
+Route::get('/contacts', [ContactsController::class, 'index'])
+    ->name('contacts.index');
+Route::post('/contacts', [ContactsController::class, 'submit'])
+    ->name('contacts.submit');
 Route::get('/{page:slug}', [PageController::class, 'show']);
 
