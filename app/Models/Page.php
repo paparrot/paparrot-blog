@@ -10,7 +10,15 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
+ * @property string $id
+ * @property string $title
  * @property string $slug
+ * @property string $type
+ * @property string $description
+ * @property string $body
+ * @property string $created_at
+ * @property string $updated_at
+ * @property string $deleted_at
  */
 class Page extends Model implements HasMedia
 {
@@ -26,7 +34,6 @@ class Page extends Model implements HasMedia
         'slug',
         'type',
         'description',
-        'preview',
         'body',
     ];
 }

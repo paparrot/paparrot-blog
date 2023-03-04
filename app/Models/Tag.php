@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property string $id
+ * @property string $title
+ * @property string $slug
+ * @property string $created_at
+ * @property string $updated_at
+ * @property string $deleted_at
+ * @property Article[] $articles
+ */
 class Tag extends Model
 {
     use HasFactory, SoftDeletes, HasUuids;

@@ -11,6 +11,10 @@ use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @property  string $id
+ * @property  string $email
+ * @property  string $name
+ * @property  string $created_at
+ * @property  string $updated_at
  */
 class User extends Authenticatable
 {
@@ -45,4 +49,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function canAccessFilament(): bool
+    {
+        return str_ends_with($this->email, '@pm.me');
+    }
 }

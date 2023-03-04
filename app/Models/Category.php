@@ -10,6 +10,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+/**
+ * @property string $id
+ * @property string $title
+ * @property string $slug
+ * @property string $description
+ * @property string $created_at
+ * @property string $updated_at
+ * @property string $deleted_at
+ * @property Article[] $articles
+ */
 class Category extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, HasUuids, InteractsWithMedia;
