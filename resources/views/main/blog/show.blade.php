@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('title', $article->seo_title ?? $article->title)
+@section('description', $article->seo_description)
+@section('keywords', $article->seo_keywords)
 
 
 @section('content')

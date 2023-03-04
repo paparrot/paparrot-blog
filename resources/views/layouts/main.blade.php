@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="@yield('description', "Laravel web developer personal website")"/>
+    <meta name="keywords" content="@yield('keywords', "PHP, Laravel, Development, Full stack, web development, Backend")"/>
+    <title>@yield('description')</title>
     @vite('resources/css/app.css')
 </head>
 <body class="dark min-h-screen flex flex-col">
