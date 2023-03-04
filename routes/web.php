@@ -32,5 +32,6 @@ Route::get('/contacts', [ContactsController::class, 'index'])
     ->name('contacts.index');
 Route::post('/contacts', [ContactsController::class, 'submit'])
     ->name('contacts.submit');
-Route::get('/{page:slug}', [PageController::class, 'show']);
+Route::get('/{page:slug}', [PageController::class, 'show'])
+    ->name('page.show');
 
