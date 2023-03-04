@@ -26,7 +26,7 @@ Route::get('/blog/{article:slug}', [ArticleController::class, 'show'])
     ->name('articles.show');
 Route::get('/projects', [ProjectController::class, 'index'])
     ->name('projects.list');
-Route::get('/projects/{project:slug}', [ProjectController::class, 'index'])
+Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])
     ->name('projects.show');
 Route::get('/contacts', [ContactsController::class, 'index'])
     ->name('contacts.index');
