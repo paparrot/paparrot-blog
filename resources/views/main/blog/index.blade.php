@@ -5,13 +5,17 @@
 @section('content')
     <h1>Blog</h1>
     <section class="body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="-my-8 divide-y-2 divide-gray-100">
+        <div class="container pt-12 pb-24 mx-auto">
+            <div class="-my-8 mb-4 divide-y-2 divide-gray-100">
                 @foreach($articles as $article)
                     <div class="py-8 flex flex-wrap md:flex-nowrap">
                         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                            <span class="font-semibold title-font">{{ $article->category?->title }}</span>
-                            <span class="mt-1 text-sm">{{ $article->created_at }}</span>
+                            <a
+                                class="text-indigo-500"
+                                href="{{ route('articles.list') }}?category={{ $article->category?->slug }}">
+                                <span class="font-semibold title-font">{{ $article->category?->title }}</span>
+                            </a>
+                            <span class="mt-1 text-sm">{{ $article->created_at->diffForHumans() }}</span>
                         </div>
                         <div class="md:flex-grow">
                             <h2 class="text-2xl font-medium title-font mb-2">{{ $article->title }}</h2>
@@ -26,6 +30,7 @@
                     </div>
                 @endforeach
             </div>
+            {{ $articles->links() }}
         </div>
     </section>
 @endsection

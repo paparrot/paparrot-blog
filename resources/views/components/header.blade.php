@@ -16,7 +16,7 @@
         </nav>
         <a
             href="/contacts"
-            class="btn btn-primary flex items-center gap-1">
+            class="btn btn-primary hidden md:block flex items-center gap-1">
             Contact
         </a>
     </div>

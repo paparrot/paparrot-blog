@@ -1,5 +1,5 @@
 @php use Illuminate\Support\Str; @endphp
-<h2 class=" pt-12  text-center text-4xl font-bold">Latest in blog</h2>
+<h2 class=" pt-12  text-center font-bold">Latest in blog</h2>
 <section class="  body-font">
     <div class="container px-5 pt-12 pb-24 mx-auto">
         <div class="flex flex-wrap -m-4">

@@ -1,6 +1,6 @@
 <footer class="  body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center dark:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
                  stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
                  viewBox="0 0 24 24">
@@ -8,9 +8,9 @@
             </svg>
             <span class="ml-3 text-xl">Paparrot</span>
         </a>
-        <p class="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© {{ today()->year }}
+        <p class="text-sm mb-0 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© {{ today()->year }}
             Paparrot —
-            <a href="https://twitter.com/paparrot_me" class="text-gray-500 ml-1" target="_blank"
+            <a href="https://github.com/paparrot" class="text-gray-500 ml-1" target="_blank"
                rel="noopener noreferrer">@paparrot</a>
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
