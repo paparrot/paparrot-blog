@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function index(Request $request): View
     {
-        $query = Article::query();
+        $query = Article::orderBy('created_at', 'desc');
 
         if ($request->has('category')) {
             $query = $query->whereRelation('category', 'slug', '=', $request->get('category'));
