@@ -9,16 +9,21 @@
     <section class="body-font">
         <div class="xl:w-2/3 mx-auto">
             @if(count($article->getMedia()) > 0)
-            <img
-                alt="content"
-                class="aspect-video rounded-lg w-rounded-lg object-cover object-center h-full w-full"
-                src="{{ $article->getMedia()[0]->getUrl() }}"
-            >
+                <img
+                    alt="{{ $article->title }}"
+                    class="aspect-video rounded-lg w-rounded-lg object-cover object-center h-full w-full"
+                    src="{{ $article->getMedia()[0]->getUrl() }}"
+                >
             @endif
             <div>
                 <div class="py-6">
                     <h1>{{ $article->title }}</h1>
-                    <a href="{{ route('articles.list') }}?category={{$article->category?->slug}}" class="text-indigo-500 dark:text-indigo-400 font-bold">{{ $article->category?->title }}</a>
+                    <a
+                        title="{{ $article->category?->title }}"
+                        href="{{ route('articles.list') }}?category={{$article->category?->slug}}"
+                        class="text-indigo-500 dark:text-indigo-400 font-bold">
+                        {{ $article->category?->title }}
+                    </a>
                     <p>{{ $article->description }}</p>
                     <hr>
                 </div>

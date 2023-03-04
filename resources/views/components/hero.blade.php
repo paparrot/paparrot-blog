@@ -14,6 +14,7 @@
                 Vue.js</p>
             <div class="flex justify-center">
                 <a
+                    title="Linkedin"
                     href="https://www.linkedin.com/in/klim-subbotin/"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -22,6 +23,7 @@
                     Linkedin
                 </a>
                 <a
+                    title="Resume"
                     class="btn btn-primary ml-4">
                     Resume
                 </a>

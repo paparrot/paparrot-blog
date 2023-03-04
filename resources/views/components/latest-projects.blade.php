@@ -26,7 +26,9 @@
                             <p class="leading-relaxed text-base">
                                 {{ Str::limit($project->description) }}
                             </p>
-                            <a class="mt-auto mb-0 text-lg flex items-center text-indigo-600 dark:text-indigo-400"
+                            <a
+                                title="{{ $project->title }}"
+                                class="mt-auto mb-0 text-lg flex items-center text-indigo-600 dark:text-indigo-400"
                                href="{{ route('projects.show', ['project' => $project]) }}">
                                 Learn more
                                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"

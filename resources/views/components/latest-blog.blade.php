@@ -14,7 +14,7 @@
                         <p class="leading-relaxed mb-3">
                             {{ Str::limit($article->description) }}
                         </p>
-                        <a href="{{ route('articles.show', ['article' => $article]) }}" class="text-indigo-600 dark:text-indigo-400 inline-flex items-center">Read more
+                        <a title="{{$article->title}}" href="{{ route('articles.show', ['article' => $article]) }}" class="text-indigo-600 dark:text-indigo-400 inline-flex items-center">Read more
                             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                  fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"></path>

@@ -9,7 +9,11 @@
                 </div>
                 <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
                     <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                    <a class="text-indigo-500 leading-relaxed">subbotin.klim@gmail.com</a>
+                    <a
+                        href="mailto:subbotin.klim@gmail.com"
+                        title="subbotin.klim@gmail.com"
+                        class="text-indigo-500 leading-relaxed"
+                    >subbotin.klim@gmail.com</a>
                     <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
                     <p class="leading-relaxed dark:text-gray-900">+382 (068) 480-564</p>
                 </div>
